@@ -299,12 +299,12 @@ document.addEventListener("DOMContentLoaded", function () {
         differenceElement.innerText = "~ $" + Math.floor(parseFloat(((vars.income / 12)) - ((vars.saving + vars.expenses + vars.wants) + ((vars.income / 12) * .2765) + 180)));
 
         // Adds to pie chart
-        addData(pieChart_1, "Federal Taxes", parseInt(((vars.income / 12) * .12)));
-        addData(pieChart_1, "State Taxes", parseInt(((vars.income / 12) * .07)));
-        addData(pieChart_1, "Medicare", parseInt(((vars.income / 12) * .0145)));
-        addData(pieChart_1, "State Disability", parseInt(((vars.income / 12) * .01)));
-        addData(pieChart_1, "Medical Insurance", 180);
-        addData(pieChart_1, "Inputted Deductions", parseInt((vars.saving + vars.expenses + vars.wants)));
+        // addData(pieChart_1, "Federal Taxes", parseInt(((vars.income / 12) * .12)));
+        // addData(pieChart_1, "State Taxes", parseInt(((vars.income / 12) * .07)));
+        // addData(pieChart_1, "Medicare", parseInt(((vars.income / 12) * .0145)));
+        // addData(pieChart_1, "State Disability", parseInt(((vars.income / 12) * .01)));
+        // addData(pieChart_1, "Medical Insurance", 180);
+        // addData(pieChart_1, "Inputted Deductions", parseInt((vars.saving + vars.expenses + vars.wants)));
     }
 });
 
