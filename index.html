@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Budget Calculator</title>
+</head>
+
+<body>
+    <header>
+        <img src="Img/EECU.png" alt="logo">
+        <h2>EECU</h2>
+    </header>
+
+    <h1>Budget Calculator</h1>
+
+    <section class="ocupation-container">
+        <div id="root"></div>
+    </section>
+
+    <section class="purpose_container">
+        <section id="purpose" class="purpose">
+            <h2>Purpose of Calculator</h2>
+            <p> The purpose of this calculator is to help you calculate your budget and promote healthy spending habits,
+                along with what you might need to fix in your spending.</p>
+        </section>
+    </section>
+
+    <section class="row">
+
+
+        <!-- Form 1 -->
+        <section class="form1 inpform" id="form1">
+            <form id="input-form1">
+                <h3>Income</h3>
+
+                <label for="gross-income"> Annual Gross Income </label>
+                <input type="text" id="gross-income">
+                <label for="other"> Other </label>
+                <input type="text" id="other">
+                <label for="annual-gifts">Annual Gifts</label>
+                <input type="text" id="annual-gifts">
+                <label for="tax-refund">Annual Tax Return</label>
+                <input type="text" id="tax-refund">
+                <input type="submit" class="submit-button" onclick="hide1()" value="Next">
+            </form>
+        </section>
+
+        <!-- Form 2 -->
+        <section class="form2 inpform" id="form2">
+            <form id="input-form2">
+                <h3>Savings</h3>
+
+                <label for="emergency-fund">Emergency Fund</label>
+                <input type="text" id="emergency-fund">
+                <label for="investments">Investments</label>
+                <input type="text" id="investments">
+                <label for="retirement-fund">Retirement Fund</label>
+                <input type="text" id="retirement-fund">
+                <input type="submit" class="submit-button" onclick="hide2()" value="Next">
+            </form>
+        </section>
+
+        <!-- Form 3 -->
+        <section class="form3 inpform" id="form3">
+            <form id="input-form3">
+                <h3>Wants/Subscription</h3>
+
+                <label for="tuitions">Tuitions</label>
+                <input type="text" id="tuitions">
+                <label for="vacations">Vacations</label>
+                <input type="text" id="vacations">
+                <label for="using-money">Using Money</label>
+                <input type="text" id="using-money">
+                <input type="submit" class="submit-button" onclick="hide3()" value="Next">
+            </form>
+        </section>
+
+        <!-- Form 4 -->
+        <section class="form4 inpform" id="form4">
+            <form id="input-form4">
+                <h3>Expenses</h3>
+
+                <label for="groceries">Groceries</label>
+                <input type="text" data-type="expenses" id="groceries">
+                <label for="clothing">Clothing</label>
+                <input type="text" data-type="expenses" id="clothing">
+                <label for="household">Household</label>
+                <input type="text" data-type="expenses" id="household">
+                <label for="loans">Loans</label>
+                <input type="text" data-type="expenses" id="loans">
+                <label for="transportation">Transportation</label>
+                <input type="text" data-type="expenses" id="transportation">
+                <label for="child-support">Child Support</label>
+                <input type="text" data-type="expenses" id="child-support">
+                <label for="health">Health</label>
+                <input type="text" data-type="expenses" id="health">
+                <input type="submit" class="submit-button" onclick="">
+            </form>
+        </section>
+
+        <section class="side">
+            <aside class="information">
+                <h3> Useful Information </h3>
+                <a href="#50/30/20">50/30/20 Budget</a>
+                <a href="#terms">Finance Terms</a>
+                <a href="#purpose">Purpose of Calculator</a>
+            </aside>
+
+            <canvas id="pieChart_1">
+                
+            </canvas>
+
+        </section>
+    </section>
+
+    <section class="diff-container">
+        <section class="different">
+            <h2>Before Tax Monthly Income:</h2>
+            <p id="be4-num">$0</p>
+
+            <h2>Net Monthly Income Before Deductions</h2>
+            <p id="net-income">$0</p>
+
+            <h2>Federal Taxes:</h2>
+            <p id="fed-tax">-$0</p>
+
+            <h2>State Taxes</h2>
+            <p id="state-tax">$0</p>
+
+            <h2>Social Security:</h2>
+            <p id="social-num">$0</p>
+
+            <h2>Medicare:</h2>
+            <p id="medicare-num">$0</p>
+
+            <h2>State Disability:</h2>
+            <p id="disability-num">$0</p>
+
+            <h2>Medical Insurance:</h2>
+            <p id="med-num">-$180</p>
+
+            <h2>Total Deductions:</h2>
+            <p id="total-expenses">-$0</p>
+
+            <h2>Net Monthly Income:</h2>
+            <p id="diff-num">$0</p>
+        </section>
+    </section>
+
+    <section class="know">
+        <h2> What do I need to know? </h2>
+        <section class="know-container">
+            <h3 id="50/30/20">The 50/30/20 Budget</h3>
+            <p>The 50/30/20 budget is a rule-of-thumb way to tell right off the bat if your spending may need to be
+                improved. It's okay to have a slight deviation of this rule, just have a way to determine if your
+                spending
+                is helpful for your lifestyle.
+            </p>
+
+            <h3 id="terms">Key Finance Terms</h3>
+            <p>It's always good to know what you're doing in all situations. Here's a couple terms that you may need to
+                know for this calculator.
+                “Gross”
+                income is what your salary is before taxes. “Net” income is what your salary is after taxes. Lastly,
+                “difference” means the amount of money you have after all expenses are taken out.
+            </p>
+        </section>
+    </section>
+
+    <footer>
+        <h2>Credits</h2>
+
+        <ol>
+            <li>Vincent Vang</li>
+            <li>Anissa Molina</li>
+            <li>Carl Leon</li>
+            <li>Peyton Hurt</li>
+            <li>Kaiden Garza</li>
+            <li>Anthony Santiago</li>
+            <li>Taiyang Thao</li>
+            <li>Mr. Fast</li>
+            <li>Ayden Yang</li>
+            <li>Evan Yang</li>
+        </ol>
+
+    </footer>
+</body>
+
+</html>

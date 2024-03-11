@@ -1,0 +1,338 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#pieChart_1 {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3em;
+    border: black solid 3px;
+    background-color: white;
+    overflow-y: scroll;
+    max-height: 40vh;
+}
+
+.form2,
+.form3,
+.form4 {
+    display: none;
+}
+
+#subtn1:hover .form {
+    display: none;
+}
+
+.know {
+    background-color: #F8F6F0;
+    margin-top: 1em;
+    border: 3px black solid;
+    width: 50%;
+}
+
+.know h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.know-container {
+    margin: 2em;
+}
+
+.know-container h3 {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #1D61C7;
+}
+
+footer {
+    background-color: #F8F6F0;
+    margin-top: 1em;
+    border: 3px black solid;
+    display: flex;
+    flex-flow: column wrap;
+    width: 15%;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+header {
+    color: black;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border: black solid 3px;
+
+}
+
+.ocupation-container {
+    display: flex;
+    justify-content: center;
+    width: 25;
+    text-align: center;
+    overflow-y: scroll;
+    height: 100%;
+    max-height: 200px;
+}
+
+.jobItem {
+    color: white;
+    margin-bottom: 0.5em;
+    border: solid 2px black;
+}
+
+.jobItem:hover {
+    color: black;
+}
+
+.jobItem:active {
+    background-color: red;
+}
+
+#ocupations-list {
+    height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+header img {
+    width: 10%;
+    justify-content: flex-start;
+    padding: 1em;
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#info-btn {
+    height: 2em;
+    width: 2em;
+    background-image: url(Img/info-btn.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.purpose {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin: 2em;
+    padding: 1em;
+    border: 3px black solid;
+    background-color: #F8F6F0;
+    width: 75%;
+}
+
+.different {
+    display: flex;
+    flex-flow: column;
+    color: white;
+    background-color: #51BF4E;
+    border: 3px black solid;
+    border-radius: 10%;
+    padding: 1em;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.different p {
+    margin-bottom: 1em;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.different h2 {
+    text-align: center;
+}
+
+/* Change the width to be the same as form */
+.diff-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: 20%;
+    height: 30em;
+}
+
+/* Pie Chart */
+#pieChart_1 {
+    background-color: #F8F6F0;
+    padding: 1em;
+}
+
+[type="text"] {
+    text-align: center;
+}
+
+[type="submit"] {
+    margin-top: 1em;
+}
+
+.purpose_container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    border: 3px black solid;
+    background-color: #F8F6F0;
+    flex-flow: column wrap;
+    margin-left: 2em;
+    width: 45%;
+    justify-content: center;
+}
+
+#input-form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#submit-button {
+    background-color: #51BF4E;
+    color: white;
+    padding: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.side {
+    display: flex;
+    flex-flow: column wrap;
+    width: 20%;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.information {
+    background-color: #F8F6F0;
+    margin-bottom: 3em;
+    padding: 2em;
+    width: 100%;
+    border: 3px black solid;
+}
+
+.information h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5em;
+    text-decoration: underline;
+}
+
+.information a {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    color: black;
+    font-style: italic;
+}
+
+.pie {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: white;
+    padding: 2em;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add CSS */
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 0.5em;
+    }
+
+    header img {
+        width: 20%;
+    }
+
+    .side {
+        width: 35%;
+
+
+    }
+
+    .know h2 {
+        margin-top: 0.5em;
+
+    }
+
+    .know-container p {
+        margin-bottom: 1em;
+    }
+
+    .side {
+        margin-top: 0;
+        width: 80%;
+        order: -1;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    form {
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .diff-container {
+        width: 75%;
+        text-align: center;
+        height: 10em;
+    }
+
+    .different p {
+        font-size: 1.3em;
+    }
+
+    .different h2 {
+        font-size: 1.5em;
+    }
+
+    .know {
+        text-align: center;
+        width: 80%;
+    }
+
+    footer {
+        width: 60%;
+    }
+
+    #pieChart_1 {
+        display: none;
+    }
+}
